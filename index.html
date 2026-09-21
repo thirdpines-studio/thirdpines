@@ -1,148 +1,103 @@
-<div style="background: white; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-  <div style="width: 1920px; height: 545px; min-width: 1920px; padding-left: 120px; padding-right: 120px; padding-top: 2px; padding-bottom: 2px; overflow: hidden; background-image: url("images/banner-with-headlines.png"); flex-direction: column; justify-content: center; align-items: flex-end; gap: 10px; display: flex">
-    <div style="width: 816px; height: 228px; max-width: 816px; min-width: 762px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 64px; display: flex">
-      <div style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
-        <div style="align-self: stretch; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
-          <div style="text-align: center; color: #352526; font-size: 58px; font-family: Meow Script; font-weight: 400; line-height: 69.60px; word-wrap: break-word">Seamless Pattern for Limitless Creativity</div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A collection of seamless pattern artwork." />
+    <title>Seamless Patterns</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Meow+Script&display=swap');
+
+      :root { color-scheme: light; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; min-width: 0; }
+      body { background: #fff; color: #161313; font-family: Arial, sans-serif; }
+      img { display: block; max-width: 100%; }
+
+      .hero {
+        min-height: clamp(360px, 35vw, 545px);
+        padding: 2rem clamp(1.25rem, 6.25vw, 7.5rem);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background: #f6eeee url("images/banner-with-headlines.png") center / cover no-repeat;
+      }
+      .hero__content { width: min(100%, 51rem); }
+      .hero h1 {
+        margin: 0 0 2.5rem;
+        color: #352526;
+        font-family: "Meow Script", cursive;
+        font-size: clamp(2.75rem, 4.5vw, 3.625rem);
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: center;
+      }
+      .hero__actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .625rem; }
+      .button { min-height: 4.8rem; border-radius: .625rem; }
+      .button--solid { background: #515662; }
+      .button--outline { border: 4px solid #e6b8b8; }
+
+      .section { padding: clamp(3.5rem, 6.25vw, 7.5rem); }
+      .section__title {
+        margin: 0 0 clamp(2rem, 2.5vw, 3rem);
+        font-family: "Just Me Again Down Here", cursive;
+        font-size: clamp(3rem, 5vw, 4rem);
+        font-weight: 400;
+        line-height: 1;
+      }
+      .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: .75rem; }
+      .card { padding: 1.25rem 1.25rem 2.5rem; border-radius: 1.25rem; background: #f8f8f8; overflow: hidden; }
+      .card img { width: 100%; height: clamp(13rem, 20vw, 18.75rem); object-fit: cover; border-radius: 1.25rem; }
+      .card h2 { margin: 1.5rem 0 0; font-size: 2rem; font-weight: 400; line-height: 1.2; }
+
+      .mockups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: .25rem; }
+      .mockups img { width: 100%; aspect-ratio: 424 / 262; padding: 1.5rem; object-fit: contain; border-radius: .625rem; }
+
+      @media (max-width: 38rem) {
+        .hero { justify-content: center; min-height: 29rem; }
+        .hero h1 { margin-bottom: 2rem; }
+        .section { padding-inline: 1.25rem; }
+        .card h2 { font-size: 1.5rem; }
+        .mockups img { padding: .75rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <h1>Seamless Pattern for Limitless Creativity</h1>
+        <div class="hero__actions" aria-label="Featured actions">
+          <div class="button button--solid"></div>
+          <div class="button button--outline"></div>
         </div>
       </div>
-      <div style="align-self: stretch; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
-        <div style="flex: 1 1 0; height: 77px; padding: 24px; background: #515662; border-radius: 10px"></div>
-        <div style="flex: 1 1 0; height: 77px; padding: 24px; border-radius: 10px; border: 4px #E6B8B8 solid"></div>
-      </div>
-    </div>
-  </div>
-  <div style="width: 1920px; padding: 120px; background: white; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 48px; display: flex">
-    <div style="width: 100%; max-width: 816px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex">
-      <div style="color: black; font-size: 64px; font-family: Just Me Again Down Here; font-weight: 400; word-wrap: break-word">Artwork Gallery</div>
-    </div>
-    <div style="align-self: stretch; overflow: hidden; justify-content: center; align-items: center; gap: 12px; display: inline-flex; flex-wrap: wrap; align-content: center">
-      <div style="flex: 1 1 0; max-width: 411px; min-width: 400px; padding-top: 20px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; background: #F8F8F8; overflow: hidden; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 24px; display: inline-flex">
-        <img style="align-self: stretch; height: 300px; position: relative; border-radius: 20px" src="images/lace-pattern.png" />
-        <div style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 12px; display: flex">
-          <div style="color: black; font-size: 32px; font-family: Mona Sans; font-weight: 400; word-wrap: break-word"> Lace Pattern</div>
+    </header>
+
+    <main>
+      <section class="section" aria-labelledby="gallery-title">
+        <h2 class="section__title" id="gallery-title">Artwork Gallery</h2>
+        <div class="gallery">
+          <article class="card"><img src="images/lace-pattern.png" alt="Lace pattern" /><h2>Lace Pattern</h2></article>
+          <article class="card"><img src="images/watercolor-pattern.png" alt="Watercolor pattern" /><h2>Watercolor Pattern</h2></article>
+          <article class="card"><img src="images/tiles-pattern.png" alt="Tiles pattern" /><h2>Tiles Pattern</h2></article>
+          <article class="card"><img src="images/tartan-pattern.png" alt="Tartan pattern" /><h2>Tartan Pattern</h2></article>
+          <article class="card"><img src="images/popart-pattern.png" alt="Pop art pattern" /><h2>Pop Art Pattern</h2></article>
+          <article class="card"><img src="images/batik-pattern.png" alt="Modern batik pattern" /><h2>Modern Batik Pattern</h2></article>
+          <article class="card"><img src="images/abstract-pattern.png" alt="Abstract pattern" /><h2>Abstract Pattern</h2></article>
         </div>
-      </div>
-      <div style="flex: 1 1 0; max-width: 411px; min-width: 400px; padding-top: 20px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; background: #F8F8F8; overflow: hidden; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 24px; display: inline-flex">
-        <img style="align-self: stretch; height: 300px; position: relative; border-radius: 20px" src="images/watercolor-pattern.png" />
-        <div style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 12px; display: flex">
-          <div style="color: black; font-size: 32px; font-family: Mona Sans; font-weight: 400; word-wrap: break-word">Watercolor Pattern</div>
+      </section>
+
+      <section class="section" aria-labelledby="mockups-title">
+        <h2 class="section__title" id="mockups-title">Bring the Pattern to the Surface</h2>
+        <div class="mockups">
+          <img src="images/box-mockup.png" alt="Pattern on a box" />
+          <img src="images/wrap-paper-mockup.png" alt="Patterned wrapping paper" />
+          <img src="images/cushion-mockup.png" alt="Pattern on a cushion" />
+          <img src="images/tote-bag-mockup.png" alt="Pattern on a tote bag" />
+          <img src="images/tiles-mockup.png" alt="Patterned tiles" />
+          <img src="images/cement-tiles-mockup.png" alt="Patterned cement tiles" />
         </div>
-      </div>
-      <div style="flex: 1 1 0; max-width: 411px; min-width: 400px; padding-top: 20px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; background: #F8F8F8; overflow: hidden; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 24px; display: inline-flex">
-        <img style="align-self: stretch; height: 300px; position: relative; border-radius: 20px" src="images/tiles-pattern.png" />
-        <div style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 12px; display: flex">
-          <div style="color: black; font-size: 32px; font-family: Mona Sans; font-weight: 400; word-wrap: break-word">Tiles Pattern</div>
-        </div>
-      </div>
-      <div style="flex: 1 1 0; max-width: 411px; min-width: 400px; padding-top: 20px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; background: #F8F8F8; overflow: hidden; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 24px; display: inline-flex">
-        <img style="align-self: stretch; height: 300px; position: relative; border-radius: 20px" src="images/tartan-pattern.png" />
-        <div style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 12px; display: flex">
-          <div style="color: black; font-size: 32px; font-family: Mona Sans; font-weight: 400; word-wrap: break-word">Tartan Pattern</div>
-        </div>
-      </div>
-      <div style="flex: 1 1 0; max-width: 411px; min-width: 400px; padding-top: 20px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; background: #F8F8F8; overflow: hidden; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 24px; display: inline-flex">
-        <img style="align-self: stretch; height: 300px; position: relative; border-radius: 20px" src="images/popart-pattern.png" />
-        <div style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 12px; display: flex">
-          <div style="color: black; font-size: 32px; font-family: Mona Sans; font-weight: 400; word-wrap: break-word">Pop Art Pattern</div>
-        </div>
-      </div>
-      <div style="flex: 1 1 0; max-width: 411px; min-width: 400px; padding-top: 20px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; background: #F8F8F8; overflow: hidden; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 24px; display: inline-flex">
-        <img style="align-self: stretch; height: 300px; position: relative; border-radius: 20px" src="images/batik-pattern.png" />
-        <div style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 12px; display: flex">
-          <div style="color: black; font-size: 32px; font-family: Mona Sans; font-weight: 400; word-wrap: break-word">Modern Batik Pattern</div>
-        </div>
-      </div>
-      <div style="flex: 1 1 0; max-width: 411px; min-width: 400px; padding-top: 20px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; background: #F8F8F8; overflow: hidden; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 24px; display: inline-flex">
-        <img style="align-self: stretch; height: 300px; position: relative; border-radius: 20px" src="images/abstract-pattern.png" />
-        <div style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 12px; display: flex">
-          <div style="color: black; font-size: 32px; font-family: Mona Sans; font-weight: 400; word-wrap: break-word">Abstract Pattern</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div style="width: 1920px; padding: 120px; background: white; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 48px; display: flex">
-    <div style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
-      <div style="width: 100%; max-width: 1060px; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
-        <div style="color: black; font-size: 64px; font-family: Just Me Again Down Here; font-weight: 400; word-wrap: break-word">Bring the Pattern to the Surface </div>
-      </div>
-    </div>
-    <div style="align-self: stretch; overflow: hidden; justify-content: center; align-items: flex-start; gap: 4px; display: inline-flex; flex-wrap: wrap; align-content: flex-start">
-      <img style="width: 424px; height: 262px; max-width: 610px; min-width: 400px; padding: 24px; border-radius: 10px" src="images/box-mockup.png" />
-      <img style="width: 424px; height: 262px; max-width: 610px; min-width: 400px; padding: 24px; border-radius: 10px" src="images/wrap-paper-mockup.png" />
-      <img style="width: 424px; height: 262px; max-width: 610px; min-width: 400px; padding: 24px; border-radius: 10px" src="images/cushion-mockup.png" />
-      <img style="width: 424px; height: 262px; max-width: 610px; min-width: 400px; padding: 24px; border-radius: 10px" src="images/tote-bag-mockup.png" />
-      <img style="width: 424px; height: 262px; max-width: 610px; min-width: 400px; padding: 24px; border-radius: 10px" src="images/tiles-mockup.png" />
-      <img style="width: 424px; height: 262px; max-width: 610px; min-width: 400px; padding: 24px; border-radius: 10px" src="images/cement-tiles-mockup.png" />
-    </div>
-  </div>
-<div style="background: white; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-    <div style="width: 1920px; padding-top: 22px; padding-bottom: 218px; padding-left: 120px; padding-right: 120px; background: white; overflow: hidden; justify-content: flex-start; align-items: center; gap: 48px; display: inline-flex; flex-wrap: wrap; align-content: center">
-      <div style="flex: 1 1 0; min-width: 600px; background: white; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
-        <div style="align-self: stretch; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
-          <div style="flex: 1 1 0; color: #191919; font-size: 72px; font-family: Inter; font-weight: 900; word-wrap: break-word">Find My Pattern at</div>
-        </div>
-        <div style="align-self: stretch; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex; flex-wrap: wrap; align-content: flex-start">
-          <div style="flex: 1 1 0; min-width: 256px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
-            <div style="align-self: stretch; color: black; font-size: 24px; font-family: Inter; font-weight: 700; word-wrap: break-word">Pngtree</div>
-            <div style="align-self: stretch; color: black; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">https://pngtree.com/thirdpines_26648934</div>
-          </div>
-        </div>
-        <div style="align-self: stretch; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex; flex-wrap: wrap; align-content: flex-start">
-          <div style="flex: 1 1 0; min-width: 256px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
-            <div style="align-self: stretch; color: black; font-size: 24px; font-family: Inter; font-weight: 700; word-wrap: break-word">Adobe stock</div>
-            <div style="align-self: stretch; color: black; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">https://stock.adobe.com/ca/contributor/211924387/thirdpines-studio?load_type=author&prev_url=detail</div>
-          </div>
-        </div>
-      </div>
-      <div style="flex: 1 1 0; height: 867px; max-width: 816px; min-width: 762px; padding-left: 48px; padding-right: 48px; padding-top: 49px; padding-bottom: 49px; background: #F8F8F8; overflow: hidden; border-radius: 20px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 37px; display: inline-flex">
-        <div style="align-self: stretch; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
-          <div style="flex: 1 1 0; color: black; font-size: 48px; font-family: Inter; font-weight: 900; word-wrap: break-word">Get in Touch</div>
-        </div>
-        <div style="align-self: stretch; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
-          <div style="flex: 1 1 0; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
-            <div style="width: 355px; height: 24px; position: relative; overflow: hidden">
-              <div style="width: 355px; left: 0px; top: 0px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 500; letter-spacing: 1.28px; word-wrap: break-word">Name</div>
-            </div>
-            <div style="align-self: stretch; height: 60px; position: relative; background: white; overflow: hidden; border-radius: 10px">
-              <div style="left: 24px; top: 18px; position: absolute; opacity: 0.25; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">John</div>
-            </div>
-          </div>
-          <div style="flex: 1 1 0; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
-            <div style="width: 355px; height: 24px; position: relative; overflow: hidden">
-              <div style="width: 355px; left: 0px; top: 0px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 500; letter-spacing: 1.28px; word-wrap: break-word">Surname</div>
-            </div>
-            <div style="align-self: stretch; height: 60px; position: relative; background: white; overflow: hidden; border-radius: 10px">
-              <div style="left: 24px; top: 18px; position: absolute; opacity: 0.25; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Doe</div>
-            </div>
-          </div>
-        </div>
-        <div style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex">
-          <div style="align-self: stretch; height: 24px; position: relative; overflow: hidden">
-            <div style="width: 720px; left: 0px; top: 0px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 500; letter-spacing: 1.28px; word-wrap: break-word">Mail</div>
-          </div>
-          <div style="align-self: stretch; height: 60px; position: relative; background: white; overflow: hidden; border-radius: 10px">
-            <div style="left: 24px; top: 18px; position: absolute; opacity: 0.25; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">johndoe@mail.net</div>
-          </div>
-        </div>
-        <div style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex">
-          <div style="align-self: stretch; height: 24px; position: relative; overflow: hidden">
-            <div style="width: 720px; left: 0px; top: 0px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 500; letter-spacing: 1.28px; word-wrap: break-word">Address</div>
-          </div>
-          <div style="align-self: stretch; height: 60px; position: relative; background: white; overflow: hidden; border-radius: 10px">
-            <div style="left: 24px; top: 18px; position: absolute; opacity: 0.25; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Capitol, WA</div>
-          </div>
-        </div>
-        <div style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex">
-          <div style="align-self: stretch; height: 24px; position: relative; overflow: hidden">
-            <div style="width: 720px; left: 0px; top: 0px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 500; letter-spacing: 1.28px; word-wrap: break-word">Description</div>
-          </div>
-          <div style="align-self: stretch; height: 156px; position: relative; background: white; border-radius: 10px"></div>
-        </div>
-        <div style="align-self: stretch; padding: 24px; background: black; overflow: hidden; border-radius: 10px; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
-          <div style="flex: 1 1 0; text-align: center; color: white; font-size: 24px; font-family: Inter; font-weight: 700; word-wrap: break-word">Contact Me</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+      </section>
+    </main>
+  </body>
+</html>
