@@ -14,7 +14,7 @@
       img { display: block; max-width: 100%; }
 
   /* HERO */
-  .hero{min-height:340px;max-height:545px;background:#9e898a url("images/banner-with-headlines.png");display: flex;align-items: center;justify-content: flex-end;}
+  .hero{min-height: clamp(360px, 35vw, 545px);padding: 2rem clamp(1.25rem, 6.25vw, 7.5rem);display: flex;align-items: center;justify-content: flex-end;background:#9e898a url("images/banner-with-headlines.png") center / cover no-repeat;}
   .hero-inner{height:100%;position:relative;padding:5.4% 7.4%;}
   .brand{position:absolute;left:7.5%;top:8%;width:16%;max-width:290px}
   .brand img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
