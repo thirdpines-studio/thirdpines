@@ -1,103 +1,62 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A collection of seamless pattern artwork." />
-    <title>Seamless Patterns</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Meow+Script&display=swap');
+import bannerWithHeadlines from "./banner-with-headlines.png";
+import boxMockup from "./box-mockup.png";
+import { ContactInformationSection } from "./ContactInformationSection";
+import cementTilesMockup from "./cement-tiles-mockup.png";
+import cushionMockup from "./cushion-mockup.png";
+import { PatternGallerySection } from "./PatternGallerySection";
+import tilesMockup from "./tiles-mockup.png";
+import toteBagMockup from "./tote-bag-mockup.png";
+import wrapPaperMockup from "./wrap-paper-mockup.png";
 
-      :root { color-scheme: light; }
-      * { box-sizing: border-box; }
-      html, body { margin: 0; min-width: 0; }
-      body { background: #fff; color: #161313; font-family: Arial, sans-serif; }
-      img { display: block; max-width: 100%; }
+const mockupImages = [
+  { src: boxMockup, alt: "Box mockup" },
+  { src: wrapPaperMockup, alt: "Wrap paper mockup" },
+  { src: cushionMockup, alt: "Cushion mockup" },
+  { src: toteBagMockup, alt: "Tote bag mockup" },
+  { src: tilesMockup, alt: "Tiles mockup" },
+  { src: cementTilesMockup, alt: "Cement tiles mockup" },
+];
 
-      .hero {
-        min-height: clamp(360px, 35vw, 545px);
-        padding: 2rem clamp(1.25rem, 6.25vw, 7.5rem);
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        background: #f6eeee url("images/banner-with-headlines.png") center / cover no-repeat;
-      }
-      .hero__content { width: min(100%, 51rem); }
-      .hero h1 {
-        margin: 0 0 2.5rem;
-        color: #352526;
-        font-family: "Meow Script", cursive;
-        font-size: clamp(2.75rem, 4.5vw, 3.625rem);
-        font-weight: 400;
-        line-height: 1.2;
-        text-align: center;
-      }
-      .hero__actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .625rem; }
-      .button { min-height: 4.8rem; border-radius: .625rem; }
-      .button--solid { background: #515662; }
-      .button--outline { border: 4px solid #e6b8b8; }
-
-      .section { padding: clamp(3.5rem, 6.25vw, 7.5rem); }
-      .section__title {
-        margin: 0 0 clamp(2rem, 2.5vw, 3rem);
-        font-family: "Just Me Again Down Here", cursive;
-        font-size: clamp(3rem, 5vw, 4rem);
-        font-weight: 400;
-        line-height: 1;
-      }
-      .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: .75rem; }
-      .card { padding: 1.25rem 1.25rem 2.5rem; border-radius: 1.25rem; background: #f8f8f8; overflow: hidden; }
-      .card img { width: 100%; height: clamp(13rem, 20vw, 18.75rem); object-fit: cover; border-radius: 1.25rem; }
-      .card h2 { margin: 1.5rem 0 0; font-size: 2rem; font-weight: 400; line-height: 1.2; }
-
-      .mockups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: .25rem; }
-      .mockups img { width: 100%; aspect-ratio: 424 / 262; padding: 1.5rem; object-fit: contain; border-radius: .625rem; }
-
-      @media (max-width: 38rem) {
-        .hero { justify-content: center; min-height: 29rem; }
-        .hero h1 { margin-bottom: 2rem; }
-        .section { padding-inline: 1.25rem; }
-        .card h2 { font-size: 1.5rem; }
-        .mockups img { padding: .75rem; }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="hero">
-      <div class="hero__content">
-        <h1>Seamless Pattern for Limitless Creativity</h1>
-        <div class="hero__actions" aria-label="Featured actions">
-          <div class="button button--solid"></div>
-          <div class="button button--outline"></div>
+export const ContainerScreen = (): JSX.Element => {
+  return (
+    <main className="inline-flex flex-col items-start relative bg-white">
+      <header className="relative w-[1920px] h-[545px]">
+        <img
+          className="w-[1920px] h-[545px] object-cover"
+          alt="Third Pines seamless pattern collection banner"
+          src={bannerWithHeadlines}
+        />
+      </header>
+      <PatternGallerySection />
+      <section
+        className="flex flex-col w-[1920px] items-start gap-12 p-[120px] relative flex-[0_0_auto] bg-white"
+        aria-labelledby="surface-patterns-heading"
+      >
+        <div className="flex flex-col items-start gap-6 relative self-stretch w-full flex-[0_0_auto]">
+          <div className="flex max-w-[1060px] items-start gap-2.5 relative w-full flex-[0_0_auto]">
+            <h2
+              id="surface-patterns-heading"
+              className="relative w-fit mt-[-1.00px] [font-family:'Just_Me_Again_Down_Here-Regular',Helvetica] font-normal text-black text-[64px] tracking-[-2.56px] leading-[normal]"
+            >
+              Bring the Pattern to the Surface
+            </h2>
+          </div>
         </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="section" aria-labelledby="gallery-title">
-        <h2 class="section__title" id="gallery-title">Artwork Gallery</h2>
-        <div class="gallery">
-          <article class="card"><img src="images/lace-pattern.png" alt="Lace pattern" /><h2>Lace Pattern</h2></article>
-          <article class="card"><img src="images/watercolor-pattern.png" alt="Watercolor pattern" /><h2>Watercolor Pattern</h2></article>
-          <article class="card"><img src="images/tiles-pattern.png" alt="Tiles pattern" /><h2>Tiles Pattern</h2></article>
-          <article class="card"><img src="images/tartan-pattern.png" alt="Tartan pattern" /><h2>Tartan Pattern</h2></article>
-          <article class="card"><img src="images/popart-pattern.png" alt="Pop art pattern" /><h2>Pop Art Pattern</h2></article>
-          <article class="card"><img src="images/batik-pattern.png" alt="Modern batik pattern" /><h2>Modern Batik Pattern</h2></article>
-          <article class="card"><img src="images/abstract-pattern.png" alt="Abstract pattern" /><h2>Abstract Pattern</h2></article>
+        <div
+          className="items-start justify-center gap-[4px_4px] flex flex-wrap relative self-stretch w-full flex-[0_0_auto]"
+          aria-label="Pattern applications gallery"
+        >
+          {mockupImages.map((image) => (
+            <img
+              key={image.alt}
+              className="relative max-w-[610px] w-[424px] h-[262px] object-cover"
+              alt={image.alt}
+              src={image.src}
+            />
+          ))}
         </div>
       </section>
-
-      <section class="section" aria-labelledby="mockups-title">
-        <h2 class="section__title" id="mockups-title">Bring the Pattern to the Surface</h2>
-        <div class="mockups">
-          <img src="images/box-mockup.png" alt="Pattern on a box" />
-          <img src="images/wrap-paper-mockup.png" alt="Patterned wrapping paper" />
-          <img src="images/cushion-mockup.png" alt="Pattern on a cushion" />
-          <img src="images/tote-bag-mockup.png" alt="Pattern on a tote bag" />
-          <img src="images/tiles-mockup.png" alt="Patterned tiles" />
-          <img src="images/cement-tiles-mockup.png" alt="Patterned cement tiles" />
-        </div>
-      </section>
+      <ContactInformationSection />
     </main>
-  </body>
-</html>
+  );
+};
